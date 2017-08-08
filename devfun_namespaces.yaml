@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: devfun-dev
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: devfun-test
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: devfun-prod
