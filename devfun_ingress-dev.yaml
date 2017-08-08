@@ -1,0 +1,29 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: ingress-dev
+  namespace: devfun-dev
+  annotations:
+    kubernetes.io/tls-acme: "true"
+    kubernetes.io/ingress.class: "nginx"
+spec:
+  tls:
+  - secretName: devfunapi-dev-tls
+    hosts:
+    - api.devfun.dev.demo.4tecture.ch
+  - secretName: devfunweb-dev-tls
+    hosts:
+    - www.devfun.dev.demo.4tecture.ch
+  rules:
+  - host: api.devfun.dev.demo.4tecture.ch
+    http:
+      paths:
+      - backend:
+          serviceName: devfunapisvc-dev
+          servicePort: 80
+  - host: www.devfun.dev.demo.4tecture.ch
+    http:
+      paths:
+      - backend:
+          serviceName: devfunwebsvc-dev
+          servicePort: 80
