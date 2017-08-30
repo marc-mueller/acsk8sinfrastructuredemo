@@ -1,8 +1,8 @@
 Param(
-  [string]$vstspat = "xekjdwzofuorsbz4fpgf6vmd3lkktyuja5ssqgrks7ijikjssvtq",
-  [string]$subscriptionname = "MVP VS Ultimate",
-  [string]$rsakeyfile = "C:\Users\mmueller\.ssh\id_rsa",
-  [string]$vstsaccount = "4tecture-training"
+  [string]$vstspat = "xxxxxxxx",
+  [string]$subscriptionname = "xxxxxx",
+  [string]$rsakeyfile = "xxxxxxx",
+  [string]$vstsaccount = "xxxxxxx"
 )
 
 ### setup the cli settings
